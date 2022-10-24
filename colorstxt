@@ -1,0 +1,21 @@
+/* Color Theme Swatches in Hex */
+.San-Marino-1-hex { color: #556273; }
+.San-Marino-2-hex { color: #69788C; }
+.San-Marino-3-hex { color: #8A99A6; }
+.San-Marino-4-hex { color: #F2F2F2; }
+.San-Marino-5-hex { color: #D9D9D9; }
+
+/* Color Theme Swatches in RGBA */
+.San-Marino-1-rgba { color: rgba(84, 97, 114, 1); }
+.San-Marino-2-rgba { color: rgba(105, 120, 140, 1); }
+.San-Marino-3-rgba { color: rgba(137, 152, 165, 1); }
+.San-Marino-4-rgba { color: rgba(242, 242, 242, 1); }
+.San-Marino-5-rgba { color: rgba(216, 216, 216, 1); }
+
+/* Color Theme Swatches in HSLA */
+.San-Marino-1-hsla { color: hsla(213, 14, 39, 1); }
+.San-Marino-2-hsla { color: hsla(213, 14, 48, 1); }
+.San-Marino-3-hsla { color: hsla(208, 13, 59, 1); }
+.San-Marino-4-hsla { color: hsla(0, 0, 95, 1); }
+.San-Marino-5-hsla { color: hsla(0, 0, 85, 1); }
+

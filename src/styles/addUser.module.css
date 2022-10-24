@@ -1,0 +1,67 @@
+.cont{
+  display: grid;
+
+}
+.spanTitle{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+.inputGroup{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: .5rem 0;
+  padding-bottom: .3rem; 
+}
+.label{
+  opacity: .4;
+  font-size: 1.5rem;
+}
+.input, .select{
+  padding: .2rem 0;
+  position: relative;
+  font-size: 1.3rem;
+  margin: .6rem 0;
+  background: transparent;
+  color: #556273;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid;
+  border-radius: .3rem .3rem 0 0;
+}
+.input:focus, .select:focus{
+  background: rgba(255, 255, 255, .2);
+}
+.select{
+  width: 100%;
+}
+.small{
+  position: absolute;
+  bottom: 0;
+  color: #8c6969;
+}
+.selectGroup{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: .3rem 0;
+  margin: .5rem 0;
+}
+.op{
+  text-align: center;
+}
+.acces{
+  color: #556273;
+  background: transparent;
+  border: 1px solid #556273;
+  padding: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  padding: .5rem 1rem;
+  border-radius: .2rem;
+}
+.acces:hover{
+  background: #8a99a631;
+  border: 1px solid transparent;
+}

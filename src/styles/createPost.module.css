@@ -1,0 +1,42 @@
+.cont{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.textArea{
+  resize: none;
+  font-size: 1.5rem;
+  padding: .5rem;
+  border: none;
+  color:#556273;
+  height: 135px;
+  background: #f2f2f23a;
+  border-radius: .3rem;
+  outline: none;
+}
+.post{
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: .3rem 0;
+}
+.buttonsPost{
+  margin: .5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.post, .icon{
+  background: transparent;
+  color: #556273;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  border-radius: .3rem;
+  padding: .5rem;
+  border: 1px solid #556273;
+  cursor: pointer;
+}
+.post:hover, .icon:hover{
+  background: #8a99a631;
+  border: 1px solid transparent;
+}

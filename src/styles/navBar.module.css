@@ -1,0 +1,72 @@
+.cont{
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  background: #556273 ;
+  color: #FFF;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  padding: 0 1rem;
+  align-items: center;
+}
+.logOut{
+  border: none;
+  padding: .5rem;
+  border-radius: .3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background: transparent;
+  position: relative;
+  display: flex;
+  gap: .5rem;
+}
+.logOut:hover{
+  background: #8A99A6;
+}
+.menu{
+  z-index: -999;
+  position: absolute;
+  color: #556273;
+  top: 3rem;
+  right: 0;
+  width: 250px;
+  border-radius: 0 0 .3rem .3rem;
+  padding: .5rem ;
+  background: #FFF;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  flex-direction: column;
+}
+.btnMenu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  border-radius: .3rem;
+  border: none;
+  background: transparent;
+  color: #556273;
+  width: 100%;
+}
+.btnMenu:hover{
+  cursor: pointer;
+  background: #D9D9D9;
+}
+.iconMain{
+  font-size: 2rem;
+  padding: .5rem 0;
+}
+.btnInfo{
+  font-size: 1rem;
+}
+.menuNone{
+  display: none;
+}
+/* .botones{
+  background: #000;
+} */

@@ -1,0 +1,108 @@
+.ul{
+  display: flex;
+  flex-direction: column;
+
+}
+.cont{
+  display: flex;
+}
+.li{
+  list-style: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+  margin: .5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: .3rem;
+  width: 100%;
+}
+.imgProfile{
+  margin: .5rem 0 0 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.division{
+  width: 95%;
+  margin: auto;
+  opacity: .2;
+}
+.headPost{
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+.info{
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.infoTime{
+  opacity: .5;
+}
+.delete{
+  border: none;
+  background: transparent;
+  color: #556273;
+  opacity: .5;
+  cursor: pointer;
+  padding: .3rem;
+  border-radius: .3rem;
+  font-size: 1rem;
+}
+.delete:hover{
+  color: tomato;
+}
+.body{
+  text-align: justify;
+  padding: 1rem 1rem;
+}
+.options{
+  display: flex;
+  padding: .5rem 1rem;
+}
+.like, .share, .comment{
+  border: none;
+  background: transparent;
+  color: #556273;
+  opacity: .5;
+  margin: 0 .2rem;
+  cursor: pointer;
+  padding: .3rem;
+  width: 50px;
+  border-radius: .3rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.like:hover{
+  color: rgb(143, 21, 0);
+  background: rgba(255, 99, 71, 0.3);
+}
+.comment:hover{
+  color: rgb(0, 73, 133);
+  background: rgba(70, 131, 180, 0.3);
+}
+.share:hover{
+  color: rgb(91, 136, 0);
+  background: rgba(153, 205, 50, 0.3);
+}
+.likeON{
+  border: none;
+  color: rgb(143, 21, 0);
+  background: rgba(255, 99, 71, 0.3);
+  opacity: .5;
+  margin: 0 .2rem;
+  cursor: pointer;
+  padding: .3rem;
+  width: 50px;
+  border-radius: .3rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+.linkProfile{
+  margin: .5rem 0 0 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

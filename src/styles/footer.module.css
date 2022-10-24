@@ -1,0 +1,36 @@
+.footer{
+  font-size: 1rem;
+  /* position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  align-items: center;
+  justify-items: center;
+  padding: .5rem 0;
+}
+.side1{
+  display: flex;
+  flex-direction: column;
+  opacity: .6;
+}
+.side2{
+  display: flex;
+  gap: 10px;
+}
+.link{
+  opacity: .6 ;
+}
+.link:hover{
+  opacity: 1;
+}
+.text{
+  opacity: .6;
+}
+.adress{
+  opacity: .6;
+}
+.adress:hover{
+  opacity: 1;
+}

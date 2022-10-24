@@ -1,0 +1,13 @@
+.cont{
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  /* grid-template-columns: repeat(1,1fr); */
+  align-items: flex-end;
+}
+.divOne{
+  grid-row: 2/3;
+}
+.divTwo{
+  grid-row: 3/4;
+}

@@ -1,0 +1,53 @@
+.cont{
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  align-items: flex-start;
+}
+.postear{
+  grid-column: 2/5;
+  width: 70%;
+}
+.salir{
+  display: flex;
+  gap: 1rem;
+}
+.show{
+  display: none;
+}
+.botonera{
+ grid-column: 1/2;
+
+}
+.addU{
+  width: 215px;
+  background: #556273;
+  padding: .5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: .2rem 0;
+  padding: .5rem 1rem;
+  border-radius: .2rem;
+  border: none;
+}
+.addU:hover{
+  opacity: .8;
+}
+.swal2-popup.swal2-toast .swal2-actions{
+  justify-content: center;
+}
+.postsList{
+  position: absolute;
+  top: 18rem;
+  left: 20%;
+  right: 20%;
+  width: 40%;
+  margin: 0 auto;
+}
+.showOn{
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
