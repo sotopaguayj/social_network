@@ -1,0 +1,8 @@
+.cont {
+  margin-top: 50px;
+}
+@media (max-width: 950px) {
+  .cont {
+    margin-top: 100px;
+  }
+}

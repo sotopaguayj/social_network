@@ -1,0 +1,33 @@
+.addComment {
+  display: flex;
+  position: relative;
+  padding: 1rem;
+}
+.aComment {
+  color: #fff;
+  background: #25282c;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border-bottom: 5px solid #282c31;
+}
+.commentInfo {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.commenttime {
+}
+.commentname {
+}
+.commentfdp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+}
+.commentbody {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  text-align: justify;
+  word-break: break-all;
+}

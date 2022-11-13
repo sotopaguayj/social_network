@@ -1,0 +1,56 @@
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+.cont {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 0.3rem;
+}
+.divGroup {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100px;
+}
+.label {
+  opacity: 0.5;
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+.icon {
+  position: absolute;
+  bottom: 2rem;
+  left: 0.8rem;
+  opacity: 0.5;
+}
+.input {
+  padding: 0 2rem !important;
+}
+.input:focus {
+  background: rgba(0, 0, 0, 0.1);
+}
+.small {
+  opacity: 0.8;
+  color: tomato;
+}
+.acces {
+  margin-top: 1rem !important;
+  width: 100%;
+}
+.forget {
+  margin-top: 1rem;
+  text-align: center;
+}

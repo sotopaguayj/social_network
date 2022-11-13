@@ -9,24 +9,7 @@ export async function middleware(request) {
       tkn,
       new TextEncoder().encode("sapoperrox")
     );
-
-    switch (payload.role) {
-      case 100:
-        if (request.nextUrl.pathname == "/root") {
-          return NextResponse.next();
-        }
-        return NextResponse.redirect(new URL("/root", request.url));
-      case 111:
-        if (request.nextUrl.pathname == "/mod") {
-          return NextResponse.next();
-        }
-        return NextResponse.redirect(new URL("/mod", request.url));
-      default:
-        if (request.nextUrl.pathname == "/") {
-          return NextResponse.next();
-        }
-        return NextResponse.redirect(new URL("/", request.url));
-    }
+    return NextResponse.next();
   } catch (error) {
     return NextResponse.redirect(new URL("/login", request.url));
   }

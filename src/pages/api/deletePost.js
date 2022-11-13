@@ -1,10 +1,12 @@
+import { parse } from "cookie";
 import postModel from "models/Posts";
 
 export default async function deletePost(req, res) {
   const { body } = req;
-
   try {
-    const postDeleted = await postModel.deleteOne({ _id: body._id });
+    const postDeleted = await postModel.deleteOne({
+      _id: body.id,
+    });
     if (postDeleted.deletedCount == 1) {
       return res.status(200).json("PostDeleted");
     }

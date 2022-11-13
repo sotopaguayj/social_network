@@ -1,16 +1,19 @@
 import { dbConex } from "utils/mongoose";
-import postModel from "models/Posts";
+import userModel from "models/User";
+import axios from "axios";
 
 dbConex();
 
 export default async function postsData(req, res) {
-  try {
-    const dataDB = await postModel.find();
-    return res.status(200).json(dataDB);
-  } catch (error) {
-    console.log("-----ERROR----");
-    console.log(error);
-    console.log("-----APi/postsData----");
-    return res.status(400).json("error");
-  }
+  let arrPosts = [];
+  await userModel.find().then((val) => {
+    for (let i = 0; i < val.length; i++) {
+      val[i].posts.map((element) => {
+        element.user = val[i].data.user;
+        element.date = val[i].createdAt;
+        arrPosts.push(element);
+      });
+    }
+  });
+  return res.status(200).json(arrPosts);
 }

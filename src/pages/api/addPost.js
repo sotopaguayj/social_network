@@ -1,16 +1,24 @@
 import { dbConex } from "utils/mongoose";
-import postModel from "models/Posts";
+import userModel from "models/User";
+import Posts from "models/Posts";
 
 dbConex();
 export default async function addUser(req, res) {
+  let date = new Date();
+  let today = date.toISOString();
+  console.log(today);
   const { body } = req;
-  try {
-    const creatingPost = await postModel.create(body);
-    if (creatingPost) {
-      return res.status(201).json("postCreated");
-    }
-  } catch (error) {
-    console.log(error);
-    return res.status(500).json("serverProblem");
-  }
+  let postCont = {
+    body: body.body,
+    comments: [],
+    likes: 0,
+    fecha: today,
+  };
+
+  await userModel
+    .updateOne({ "data.user": body.user }, { $push: { posts: postCont } })
+    .then((val) => {
+      if (val.modifiedCount == 1) return res.status(201).json("postCreated");
+      console.log("Algo salio mal, contacte al encargado");
+    });
 }
