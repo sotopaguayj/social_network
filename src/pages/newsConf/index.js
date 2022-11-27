@@ -41,7 +41,7 @@ function NewsConf() {
     const form = new FormData();
     form.append("media", filex);
 
-    await axios("/api/addNew", {
+    await axios("src/pages/api/addNew", {
       method: "POST",
       data: form,
       "content-type": "multipart/form-data",
@@ -57,7 +57,6 @@ function NewsConf() {
         setLoader(false);
         // alert("Noticia Agregada!");
       });
-
     await axios.post("/api/saveNew", newData);
   };
   if (loader)
