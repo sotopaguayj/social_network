@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import NavBar from "components/NavBar";
-import NewsList from "components/newsList/index";
+import NewsList from "components/NewsList";
 import { useState } from "react";
 
 function NewsConf() {
