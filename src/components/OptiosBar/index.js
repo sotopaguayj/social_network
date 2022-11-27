@@ -7,11 +7,7 @@ function OptionsBar(props) {
   const router = useRouter();
 
   const handleNews = () => {
-    props.role == 100
-      ? router.push("/newsConf")
-      : props.role == 111
-      ? router.push("/newsConf")
-      : router.push("/news");
+    router.push("/newsConf");
   };
 
   const handleLogout = async () => {
