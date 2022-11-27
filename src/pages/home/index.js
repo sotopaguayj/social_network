@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import NavBar from "components/NavBar";
 import styles from "./index.module.css";
-import AddPost from "components/AddPost/index";
+import AddPost from "components/AddPost/Index";
 import NewsList from "components/NewsList/index";
 
 export default function index() {

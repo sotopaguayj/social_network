@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import NavBar from "components/NavBar";
 import styles from "./index.module.css";
 import CardProfile from "components/CardProfile/index";
-import AddPost from "components/AddPost/index";
+import AddPost from "components/AddPost/Index";
 
 export default function Mod() {
   const [info, setInfo] = useState({

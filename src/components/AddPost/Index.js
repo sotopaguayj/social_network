@@ -2,15 +2,15 @@ import styles from "./index.module.css";
 import Posts from "components/Posts/index";
 import MyPosts from "components/MyPosts/index";
 
-import { useForm } from "react-hook-form";
 import axios from "axios";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
 function index(props) {
   const Therouter = useRouter();
   let pathname = Therouter.pathname;
-  const [Arr, setArr] = useState(0);
+  const [Arr, setArr] = useState([]);
   const {
     register,
     handleSubmit,
