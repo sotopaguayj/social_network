@@ -37,7 +37,12 @@ function index() {
       <ul className={styles.anuncios}>
         {news.map((element, index) => (
           <li className={styles.anuncio} key={index}>
-            <a target="_blank" className={styles.imageLink} href={element.link}>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              className={styles.imageLink}
+              href={element.link}
+            >
               <img
                 className={styles.portada}
                 src={"uploads/" + element.image.name + "." + element.image.type}

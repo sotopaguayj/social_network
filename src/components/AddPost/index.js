@@ -8,9 +8,9 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 function index(props) {
-  const router = useRouter();
-  let pathname = router.pathname;
-  const [arr, setArr] = useState(0);
+  const Therouter = useRouter();
+  let pathname = Therouter.pathname;
+  const [Arr, setArr] = useState(0);
   const {
     register,
     handleSubmit,
@@ -31,7 +31,7 @@ function index(props) {
         if (res.status == 201) alert("Post Creado!");
       })
       .finally(() => {
-        setArr((arr = arr + 1));
+        setArr((Arr = Arr + 1));
         reset({
           body: "",
         });
@@ -64,9 +64,9 @@ function index(props) {
         </div>
       </form>
       {pathname !== "/home" ? (
-        <MyPosts name={props.user} arrLength={arr} />
+        <MyPosts name={props.user} arrLength={Arr} />
       ) : (
-        <Posts name={props.user} arrLength={arr} />
+        <Posts name={props.user} arrLength={Arr} />
       )}
     </div>
   );

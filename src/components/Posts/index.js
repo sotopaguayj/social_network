@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./index.module.css";
 import Router from "next/router";
@@ -10,7 +10,6 @@ import Comentary from "components/Comentary/index";
 function index(props) {
   moment.locale("es");
 
-  const inputRef = useRef();
   let date = new Date();
   let now = date.toISOString();
   const [loader, setLoader] = useState(false);
@@ -137,12 +136,7 @@ function index(props) {
       </div>
       <ul className={styles.ul}>
         {PostData.map((elem, index) => (
-          <li
-            id={elem._id}
-            ref={inputRef}
-            key={index}
-            className={styles.postList}
-          >
+          <li id={elem._id} key={index} className={styles.postList}>
             <div className={styles.head}>
               <div className={styles.info}>
                 <a
