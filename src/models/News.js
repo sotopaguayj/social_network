@@ -1,24 +1,25 @@
 import { Schema, model, models } from "mongoose";
 
-const PostSchema = new Schema(
+const NewsModel = new Schema(
   {
-    body: {
+    titulo: {
       type: String,
       required: true,
     },
-    user: {
-      type: Object,
+    link: {
+      type: String,
       required: true,
+    },
+    image: {
       name: {
         type: String,
       },
-      role: {
+      size: {
         type: Number,
       },
-    },
-    likes: {
-      type: Number,
-      default: 0,
+      type: {
+        type: String,
+      },
     },
   },
   {
@@ -27,4 +28,4 @@ const PostSchema = new Schema(
   }
 );
 
-export default models.postModel || model("postModel", PostSchema);
+export default models.newsModel || model("newsModel", NewsModel);

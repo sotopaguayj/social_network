@@ -9,17 +9,15 @@ export default async function validator(req, res) {
   const { body } = req;
   const { user, pass } = body;
 
-  try {
-    const dataDB = await userModel.findOne({
-      user: user,
-    });
-    if (dataDB) {
-      const { role } = dataDB;
-      const passDB = dataDB.pass;
-      bcrypt.compare(passDB, pass, function (err) {
-        if (err) {
-          return res.status(401).json("errorPass");
-        } else {
+  await userModel.findOne({ "data.user": user }).then((val) => {
+    if (val === null) {
+      console.log("userNotFound");
+      return res.status(404).json("UserNotFound");
+    } else {
+      const dbPass = val.data.pass;
+      const role = val.data.role;
+      bcrypt.compare(pass, dbPass, function (err, result) {
+        if (result) {
           const token = sign(
             {
               exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 15,
@@ -36,22 +34,11 @@ export default async function validator(req, res) {
             path: "/",
           });
           res.setHeader("Set-Cookie", serialized);
-          switch (role) {
-            case 100:
-              return res.status(200).json("root");
-            case 111:
-              return res.status(200).json("mod");
-            default:
-              return res.status(200).json("user");
-          }
+          res.status(200).json("access-done");
+        } else {
+          return res.status(401).json("passWrong");
         }
       });
-    } else {
-      return res.status(404).json("userNotFound");
     }
-  } catch (error) {
-    console.log("----ERROR------");
-    console.log(error);
-    console.log("---------------");
-  }
+  });
 }

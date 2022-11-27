@@ -1,0 +1,35 @@
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+.cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1rem;
+}
+.form {
+  width: 500px;
+  margin: auto;
+}
+.divGroup {
+  height: 130px;
+}
+.textArea {
+  resize: none;
+  height: 100px;
+  transition: 0.2s ease-in;
+}
+.textArea:focus {
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease-in;
+}
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}

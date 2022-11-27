@@ -1,70 +1,46 @@
+import Footer from "components/Footer/index";
+import styles from "./index.module.css";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Swal from "sweetalert2";
-import styles from "styles/formLogin.module.css";
+import { useState } from "react";
 
-function FormLogin() {
-  const uniguajira = /^[a-zA-Z]*@uniguajira.edu.co+$/g;
-  const Salert = (title, icon) => {
-    Swal.fire({
-      position: "top-start",
-      title: title,
-      icon: icon,
-      showConfirmButton: false,
-      timerProgressBar: true,
-      timer: 2000,
-      toast: true,
-    });
-  };
+function login() {
   const router = useRouter();
+  const [loader, setLoader] = useState(false);
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
-  const formSubmit = async (data) => {
-    try {
-      const sendData = await axios.post("/api/auth/validarLogin", data);
-      switch (sendData.data) {
-        case "root":
-          Salert("Bienvenido Maestro", "success");
-          setTimeout(() => {
-            router.push("/root");
-          }, 2000);
-          break;
-        case "mod":
-          Salert("Bienvenido Mod", "success");
-          setTimeout(() => {
-            router.push("/mod");
-          }, 2000);
-          break;
-        default:
-          Salert("Bienvenido Usuario", "success");
-          setTimeout(() => {
-            router.push("/");
-          }, 2000);
-          break;
-      }
-    } catch (error) {
-      switch (error.response.status) {
-        case 401:
-          Salert("Clave Errada", "error");
-          break;
-        case 404:
-          Salert("Usuario Inexistente", "error");
-          break;
-      }
-    }
+
+  const validateLogin = async (data) => {
+    // setLoader(true);
+    await axios
+      .post("api/auth/validarLogin", data)
+      .then((res) => {
+        if (res.status == 200) router.push("/home");
+      })
+      .catch((err) => {
+        if (err.response.status == 404) alert("Usuario no registrado");
+        if (err.response.status == 401) alert("Clave errada");
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   };
-  const forgetData = () => {
-    router.push("/forget");
-  };
+  if (loader)
+    return (
+      <div className={styles.loading}>
+        <img src="loader.svg" />
+        <span>Cargando</span>
+      </div>
+    );
   return (
-    <div>
+    <div className={styles.cont}>
       {/* <h2>Nombre: {watch("user")}</h2> */}
-      <form autoComplete="off" onSubmit={handleSubmit(formSubmit)}>
+      <form autoComplete="off" onSubmit={handleSubmit(validateLogin)}>
         <div className={styles.form}>
           <div className={styles.divGroup}>
             <label className={styles.label}>Usuario</label>
@@ -121,12 +97,16 @@ function FormLogin() {
             )}
           </div>
           <input className={styles.acces} type="submit" value="Entrar" />
-          <span className={styles.forget} onClick={forgetData}>
-            Olvide mi clave
-          </span>
+          <div className={styles.forget}>
+            <a href="#">Olvidé mis datos</a>
+          </div>
         </div>
       </form>
+      <div className={styles.divTwo}>
+        <Footer />
+      </div>
     </div>
   );
 }
-export default FormLogin;
+
+export default login;

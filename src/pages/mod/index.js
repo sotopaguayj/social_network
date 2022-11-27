@@ -1,14 +1,11 @@
-import Swal from "sweetalert2";
 import axios from "axios";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import CreatePost from "components/createPost";
-import PostsList from "components/postsList";
-import NavBar from "components/navBar";
-import styles from "styles/mod.module.css";
+import NavBar from "components/NavBar";
+import styles from "./index.module.css";
+import CardProfile from "components/CardProfile/index";
+import AddPost from "components/AddPost/index";
 
 export default function Mod() {
-  const router = useRouter();
   const [info, setInfo] = useState({
     user: "",
     role: "",
@@ -16,25 +13,17 @@ export default function Mod() {
   useEffect(() => {
     getData();
   }, []);
+
   const getData = async () => {
-    const resProfile = await axios.post("/api/profileData");
+    const resProfile = await axios.post("/api/cookieData");
     setInfo(resProfile.data);
   };
+  const { user, role } = info;
   return (
-    <div>
-      {/* <div className={loaderClass}>
-        <img src="loader.svg" />
-      </div> */}
-      <NavBar />
-      <div className={styles.cont}>
-        <div className={styles.postear}>
-          <CreatePost />
-        </div>
-
-        <div className={styles.posts}>
-          <PostsList />
-        </div>
-      </div>
+    <div className={styles.cont}>
+      <NavBar role={role} />
+      <CardProfile user={user} />
+      <AddPost user={user} role={role} />
     </div>
   );
 }

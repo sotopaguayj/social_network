@@ -1,0 +1,60 @@
+.conte {
+  display: flex;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+}
+.lside,
+.rside {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lside {
+  position: static;
+}
+.rside {
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputG {
+  display: flex;
+  flex-direction: column;
+}
+
+.portada {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  background: #077aab;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+.portada:hover {
+  cursor: pointer;
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+
+@media (max-width: 950px) {
+  .conte {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    margin-top: 100px;
+  }
+}

@@ -1,12 +1,17 @@
-import styles from "styles/footer.module.css";
+import styles from "./index.module.css";
 
 function Footer() {
   return (
     <footer>
       <div className={styles.footer}>
         <div className={styles.side1}>
-          <span>Telefono: +57 605 728 27 29</span>
-          <span> Correo: atencionalciudadano@uniguajira.edu.co</span>
+          <span>
+            <i className="fa-solid fa-phone"></i> +57 605 728 27 29
+          </span>
+          <span>
+            <i className="fa-solid fa-envelope"></i>{" "}
+            atencionalciudadano@uniguajira.edu.co
+          </span>
         </div>
         <div className={styles.side2}>
           <a
@@ -14,39 +19,41 @@ function Footer() {
             target="_blank"
             href="https://www.uniguajira.edu.co/"
           >
-            Web
+            <i className="fa-solid fa-globe"></i>
           </a>
           <a
             className={styles.link}
             target="_blank"
             href="https://twitter.com/UniLaGuajira"
           >
-            twitter
+            <i className="fa-brands fa-twitter"></i>
           </a>
           <a
             className={styles.link}
             target="_blank"
             href="https://www.facebook.com/UniLaGuajira/"
           >
-            Facebook
+            <i className="fa-brands fa-facebook"></i>
           </a>
           <a
             className={styles.link}
             target="_blank"
             href="https://www.instagram.com/uniguajira_/"
           >
-            Instagram
+            <i className="fa-brands fa-instagram"></i>
           </a>
           <a
             className={styles.link}
             target="_blank"
             href="https://www.youtube.com/user/UniLaGuajira"
           >
-            Youtube
+            <i className="fa-brands fa-youtube"></i>
           </a>
         </div>
         <div className={styles.side3}>
-          <span className={styles.text}>Direccion:&ensp;</span>
+          <span className={styles.text}>
+            <i className="fa-solid fa-location-dot"></i>&ensp;
+          </span>
           <a
             className={styles.adress}
             target="_blank"

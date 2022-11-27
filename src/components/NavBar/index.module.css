@@ -1,0 +1,23 @@
+.cont {
+  backdrop-filter: blur(20px);
+  background: #282c31;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.logo {
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}

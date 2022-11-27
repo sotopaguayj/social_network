@@ -78,10 +78,12 @@ function CreatePost() {
             </label>
             <input id="file" className={styles.file} type="file" hidden />
           </div>
-          <button className={styles.post}>
-            <span>publicar</span>
-            <i className="fa-solid fa-check"></i>
-          </button>
+          <div className={styles.btns}>
+            <button className={styles.post}>
+              <span>publicar</span>
+              <i className="fa-solid fa-check"></i>
+            </button>
+          </div>
         </div>
       </div>
     </form>
