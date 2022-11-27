@@ -7,7 +7,7 @@ import moment from "moment";
 import "moment/locale/es";
 import Comentary from "components/Comentary/index";
 
-function index(props) {
+function Posts(props) {
   moment.locale("es");
 
   let date = new Date();
@@ -212,4 +212,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default Posts;

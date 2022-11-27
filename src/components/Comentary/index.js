@@ -2,7 +2,7 @@ import styles from "./index.module.css";
 import { useEffect } from "react";
 import moment from "moment";
 
-function index(props) {
+function Comentary(props) {
   moment.locale("es");
   useEffect(() => {}, [props.length]);
   return (
@@ -27,4 +27,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default Comentary;

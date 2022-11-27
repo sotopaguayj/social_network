@@ -7,8 +7,8 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-const Therouter = useRouter();
 function AddPost(props) {
+  const Therouter = useRouter();
   let pathname = Therouter.pathname;
   const [Arr, setArr] = useState([]);
   const {

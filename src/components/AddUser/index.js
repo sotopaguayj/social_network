@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 import axios from "axios";
 import { useState } from "react";
 
-function index() {
+function AddUser() {
   const [user, setUser] = useState(null);
   const [load, setLoad] = useState(false);
   const {
@@ -100,4 +100,4 @@ function index() {
   );
 }
 
-export default index;
+export default AddUser;
