@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 import NavBar from "components/NavBar";
 import CardProfile from "components/CardProfile/index";
-import AddPost from "components/AddPost/Index";
+import AddPost from "components/AddPost";
 import AddUser from "components/AddUser/index";
 
 function Root() {

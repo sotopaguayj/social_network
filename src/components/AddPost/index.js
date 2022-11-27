@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useRouter } from "next/router";
 
-function index(props) {
+function AddPost(props) {
   const Therouter = useRouter();
   let pathname = Therouter.pathname;
   const [Arr, setArr] = useState([]);
@@ -72,4 +72,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default AddPost;
