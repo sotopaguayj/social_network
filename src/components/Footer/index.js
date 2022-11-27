@@ -15,6 +15,8 @@ function Footer() {
         </div>
         <div className={styles.side2}>
           <a
+            without
+            rel="noreferrer"
             className={styles.link}
             target="_blank"
             href="https://www.uniguajira.edu.co/"
@@ -22,6 +24,8 @@ function Footer() {
             <i className="fa-solid fa-globe"></i>
           </a>
           <a
+            without
+            rel="noreferrer"
             className={styles.link}
             target="_blank"
             href="https://twitter.com/UniLaGuajira"
@@ -29,6 +33,8 @@ function Footer() {
             <i className="fa-brands fa-twitter"></i>
           </a>
           <a
+            without
+            rel="noreferrer"
             className={styles.link}
             target="_blank"
             href="https://www.facebook.com/UniLaGuajira/"
@@ -36,6 +42,8 @@ function Footer() {
             <i className="fa-brands fa-facebook"></i>
           </a>
           <a
+            without
+            rel="noreferrer"
             className={styles.link}
             target="_blank"
             href="https://www.instagram.com/uniguajira_/"
@@ -43,6 +51,8 @@ function Footer() {
             <i className="fa-brands fa-instagram"></i>
           </a>
           <a
+            without
+            rel="noreferrer"
             className={styles.link}
             target="_blank"
             href="https://www.youtube.com/user/UniLaGuajira"
@@ -55,6 +65,8 @@ function Footer() {
             <i className="fa-solid fa-location-dot"></i>&ensp;
           </span>
           <a
+            without
+            rel="noreferrer"
             className={styles.adress}
             target="_blank"
             href="https://www.google.com/maps/place/Universidad+de+La+Guajira/@11.5130005,-72.8694282,15.75z/data=!4m5!3m4!1s0x8e8b7d3e96883e99:0x71a81967d2f730c4!8m2!3d11.5140459!4d-72.8691971"

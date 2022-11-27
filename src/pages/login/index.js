@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useState } from "react";
 
-function login() {
+function Login() {
   const router = useRouter();
   const [loader, setLoader] = useState(false);
   const {
@@ -109,4 +109,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;

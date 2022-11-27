@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "./index.module.css";
 
-function index(props) {
+function OptionsBar(props) {
   const router = useRouter();
 
   const handleNews = () => {
@@ -81,4 +81,4 @@ function index(props) {
   );
 }
 
-export default index;
+export default OptionsBar;

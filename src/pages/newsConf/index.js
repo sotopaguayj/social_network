@@ -5,7 +5,7 @@ import NavBar from "components/NavBar";
 import NewsList from "components/newsList/index";
 import { useState } from "react";
 
-function index() {
+function NewsConf() {
   const imageType = "image";
   const [loader, setLoader] = useState(false);
   const [newData, setNewData] = useState({});
@@ -155,4 +155,4 @@ function index() {
   );
 }
 
-export default index;
+export default NewsConf;

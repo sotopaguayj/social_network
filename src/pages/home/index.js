@@ -6,7 +6,7 @@ import styles from "./index.module.css";
 import AddPost from "components/AddPost";
 import NewsList from "components/NewsList/index";
 
-export default function index() {
+export default function Home() {
   const router = useRouter();
   const [info, setInfo] = useState({
     user: "",

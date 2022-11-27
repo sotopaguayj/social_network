@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./index.module.css";
 import axios from "axios";
 
-function index() {
+function NewsList() {
   const [news, setNews] = useState([]);
   const [loader, setLoader] = useState(false);
 
@@ -56,4 +56,4 @@ function index() {
   );
 }
 
-export default index;
+export default NewsList;
