@@ -4,6 +4,7 @@ import axios from "axios";
 import NavBar from "components/NavBar";
 import NewsList from "components/NewsList";
 import { useState } from "react";
+import fs from "fs";
 
 function NewsConf() {
   const imageType = "image";
@@ -24,40 +25,67 @@ function NewsConf() {
       return;
     }
     const files = data.file[0];
-
     const filex = new File([files], data.titulo + "." + files.type.slice(6), {
       type: files.type,
       size: files.size,
     });
+    // NO SE USA SI LO OTRO SIRVE
+    // (newData.titulo = data.titulo),
+    //   (newData.link = data.link),
+    //   (newData.image = {
+    //     name: data.titulo,
+    //     size: files.size,
+    //     type: files.type.slice(6),
+    //   });
 
-    (newData.titulo = data.titulo),
-      (newData.link = data.link),
-      (newData.image = {
-        name: data.titulo,
-        size: files.size,
-        type: files.type.slice(6),
+    // const form = new FormData();
+    // form.append("media", filex);
+
+    // await axios("/api/addNew", {
+    //   method: "POST",
+    //   data: form,
+    //   "content-type": "multipart/form-data",
+    // })
+    //   .then((res) => {
+    //     if (res.status == 200) console.log("todook");
+    //   })
+    //   .catch((err) => console.log(err))
+    //   .finally(() => {
+    //     reset({
+    //       body: "",
+    //     });
+    //     setLoader(false);
+    //   });
+    const base64File = await getBase64(filex);
+    newData.name = data.titulo;
+    newData.data = base64File;
+    newData.link = data.link;
+    function getBase64(file) {
+      return new Promise((resolve, reject) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function () {
+          resolve(reader.result);
+        };
+        reader.onerror = function (error) {
+          reject(error);
+        };
       });
+    }
 
-    const form = new FormData();
-    form.append("media", filex);
-
-    await axios("src/pages/api/addNew", {
-      method: "POST",
-      data: form,
-      "content-type": "multipart/form-data",
-    })
-      .then((res) => {
-        if (res.status == 200) console.log("todook");
+    await axios
+      .post("/api/saveNew", newData)
+      .then((result) => {
+        console.log("ImageAdded");
       })
       .catch((err) => console.log(err))
       .finally(() => {
-        reset({
-          body: "",
-        });
         setLoader(false);
-        // alert("Noticia Agregada!");
+        reset({
+          titulo: "",
+          link: "",
+        });
       });
-    await axios.post("/api/saveNew", newData);
   };
   if (loader)
     return (

@@ -12,6 +12,7 @@ function NewsList() {
       .get("/api/getNews")
       .then((res) => {
         setNews(res.data);
+        console.log(news);
       })
       .catch((err) => {
         console.log(err);
@@ -43,11 +44,8 @@ function NewsList() {
               className={styles.imageLink}
               href={element.link}
             >
-              <img
-                className={styles.portada}
-                src={"uploads/" + element.image.name + "." + element.image.type}
-              />
-              {element.titulo}
+              <img className={styles.portada} src={element.data} />
+              {element.name}
             </a>
           </li>
         ))}
